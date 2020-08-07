@@ -1,6 +1,10 @@
 假设给我们一堆样本，我们要对其进行二分类(0/1)，要么0，要么1，那如何怎么构建这个模型呢？而恰好有一个Sigmoid函数满足我们的要求
 # Sigmoid函数及图像
+
 $$σ(x)=\frac{1}{1+e^{-x}}$$
+
+![ZaOsiR.png](https://s2.ax1x.com/2019/07/05/ZaOsiR.png)
+
 可以看到，函数的定义域为$[-\infty,+\infty]$，值域为$(0,1)$,正好满足我们的要求，但是我们需要把样本映射到$-\infty$或者$+\infty$,这样才能更好的分类，这就是Logistic模型
 # Logistic模型（参数化的Sigmoid函数）
 $$h_{\theta}(x)=\frac{1}{1+e^{-\theta^{T} x}}$$

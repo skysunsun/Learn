@@ -1,9 +1,14 @@
 
 **大数定律：** 样本均值收敛到总体均值
+
 **中心极限定理：** 样本量足够大时，样本均值的分布慢慢变成正态分布
-**条件概率：** 事件A发生条件下事件B发生的概率为$P(A|B)=\frac{P(AB)}{P(B)}$
+
+**条件概率：** 事件B发生条件下事件A发生的概率为$P(A|B)=\frac{P(AB)}{P(B)}$
+
 **贝叶斯公式：** 贝叶斯公式是关于事件A和B的条件概率的一则定理：$P(B|A)=\frac{P(A|B)P(B)}{P(A)}$
+
 **先验概率：** 在事件发生之前，根据以往的经验推测的与该事件相关的概率
+
 **后验概率：** 在事件(试验)真正发生后，通过事件(试验)的结果可以修正先验概率，从而得到后验概率
 
 
@@ -46,9 +51,9 @@ P\left(Y=c_{k} | X=x\right)=\frac{P\left(X=x | Y=c_{k}\right) P\left(Y=c_{k}\rig
 $$
 
 将式 (1) 代入式 (3)，有
-$$\begin{array}{c}
+$$\begin{aligned}
 P(Y=c_{k})|X=x)= \frac{P(Y=c_{k})\prod\limits_{j} P(X^{(j)}=x^{(j)} | Y=c_{k})}{\sum\limits_{k} P\left(Y=c_{k}\right) \prod\limits_{j} P\left(X^{(j)}=x^{(j)} | Y=c_{k}\right)}, \quad k=1,2, \cdots, K
-\end{array}$$
+\end{aligned}$$
 这是朴素贝叶斯法分类的基本公式。于是，朴素贝叶斯分类器可表示为
 
 $$

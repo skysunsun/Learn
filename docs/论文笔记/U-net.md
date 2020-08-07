@@ -1,10 +1,3 @@
----
-title: 论文笔记-Convolutional Networks for Biomedical Image Segmentation
-commentable: True
-data: 2019-07-24
-mathjax: true
-tags: 网络结构
----
 
 # [Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/pdf/1505.04597.pdf)
 

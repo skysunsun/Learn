@@ -47,7 +47,8 @@ F(x)&=\hat{y}_{i}^{K}\\
 4. 把新生成的决策树$f_k(x)$加入$\hat y_i^k=\hat y_i^{k-1}+ f_{k}\left(x_{i}\right)$
 
 # [XGBoost: A Scalable Tree Boosting System](https://www.kdd.org/kdd2016/papers/files/rfp0697-chenAemb.pdf)
-然而一个好的模型，在偏差和方差上要有一个较好的平衡，损失函数代表了模型的偏差面，最小化损失函数，就相当于最小化模型的偏差，但同时要考虑模型的泛化能力即方差,所以要兼顾模型的方差，所以作者直接在损失函数中加入了正则项抑制模型复杂度的正则项，因此损失函数可以写成：
+
+一个好的模型，在偏差和方差上要有一个较好的平衡，损失函数代表了模型的偏差面，最小化损失函数，就相当于最小化模型的偏差，但同时要考虑模型的泛化能力即方差,所以要兼顾模型的方差，所以作者直接在损失函数中加入了正则项抑制模型复杂度的正则项，因此损失函数可以写成：
 $$\begin{aligned}
 L^{(k)}&=\sum_{i=1}^{n} l\left(y_{i}, \hat{y}_{i}\right)+\sum_{k=1}^{K} \Omega\left(f_{k}\right)\\
 &=\sum_{i=1}^{n} l(y_i,\hat{y}_{i}^{k-1}+f_{k}(x_{i}))+\Omega(f_{k})+constant\tag 1

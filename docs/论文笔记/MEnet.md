@@ -1,10 +1,4 @@
----
-title: 论文笔记-MEnet
-commentable: True
-data: 2019-04-13
-mathjax: true
-tags: 显著性检测
----
+
 
 # [A Metric Expression Network for Salient Object Segmentation](https://arxiv.org/pdf/1805.05638.pdf)（一种用于突出目标分割的度量表达式网络）
 

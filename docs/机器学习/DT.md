@@ -17,3 +17,5 @@
 3.CART是一颗二叉树，采用二元切割把特征取值切成两份，每一步选择基尼系数（数据不纯度）最小的特征及其对应的划分点进行分类。
 
 ID3倾向于选择取值较多的特征，C4.5一定程度对取值多的特征进行惩罚，提高泛化。CART的二值化分适用于连续变量。一般工业上，优先采用CART，再采用C4.5，然后是ID3。
+
+[https://mp.weixin.qq.com/s/P_8v0Qtdb_5Sad6sXu1f6w](https://mp.weixin.qq.com/s/P_8v0Qtdb_5Sad6sXu1f6w)

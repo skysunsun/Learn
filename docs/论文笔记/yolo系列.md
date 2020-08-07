@@ -76,7 +76,7 @@ PS：最终得到的边框坐标值是bx,by,bw,bh.而网络学习目标是tx,ty,
 ![tqNK4e.png](https://s1.ax1x.com/2020/06/11/tqNK4e.png)
 
 
-## 参考
+## 来源
 
 [https://luckmoonlight.github.io/2018/11/28/yoloV1yolov2yoloV3/](https://luckmoonlight.github.io/2018/11/28/yoloV1yolov2yoloV3/)
 
