@@ -55,7 +55,7 @@ L^{(k)}&=\sum_{i=1}^{n} l\left(y_{i}, \hat{y}_{i}\right)+\sum_{k=1}^{K} \Omega\l
 \end{aligned}$$
 其中$\Omega$代表了基模型的复杂度，比如树的深度、叶子节点数等等。这里$\Omega\left(f_{k}\right)=\gamma T+\frac{1}{2} \lambda \sum_{j=1}^{T} w_{j}^{2}$，
 
-泰勒公式二阶展开
+回想一下泰勒公式二阶展开
 
 $$f(x+\Delta x) \approx f(x)+f^{\prime}(x) \Delta x+\frac{1}{2} f^{\prime \prime}(x) \Delta x^{2}\tag2$$
 把(1)式中的$\hat{y}_{i}^{k-1},f_k(x_i)$看成(2)式中的$x,\Delta x$：
@@ -65,7 +65,7 @@ $$L^{(k)}=\sum_{i=1}^{n}\left[l\left(y_{i}, \hat{y}_{i}^{k-1}\right)+{\hat{y}_{i
 
 $$L^{(k)}=\sum_{i=1}^{n}\left[l\left(y_{i}, \hat{y}_{i}^{k-1}\right)+g_if_{k}\left(x_{i}\right)+\frac{1}{2}h_i f_{k}^{2}\left(x_{i}\right)\right]+\Omega\left(f_{k}\right)+constant \tag4$$
 
-因为$\hat{y}_{i}^{k-1}$上一棵树已经算出来了，所以$l\left(y_{i}, \hat{y}_{i}^{k-1}\right)$为常数,(4)式可以写成：
+因为上一棵树$\hat{y}_{i}^{k-1}$已经算出来了，所以$l\left(y_{i}, \hat{y}_{i}^{k-1}\right)$为常数,(4)式可以写成：
 $$\begin{aligned}
 L^{(k)} &\approx \sum_{i=1}^{n}\left[g_{i} f_{k}\left(x_{i}\right)+\frac{1}{2} h_{i} f_{k}^{2}\left(x_{i}\right)\right]+\Omega\left(f_{k}\right) \\
 &=\sum_{i=1}^{n}\left[g_{i} f_{k}\left(x_{i}\right)+\frac{1}{2} h_{i} f_{k}^{2}\left(x_{i}\right)\right]+\gamma T+\frac{1}{2} \lambda \sum_{j=1}^{T} w_{j}^{2} \\
@@ -77,7 +77,7 @@ L^{(k)} &\approx \sum_{i=1}^{n}\left[g_{i} f_{k}\left(x_{i}\right)+\frac{1}{2} h
 $$w_{j}^{*}=-\frac{G_{j}}{H_{j}+\lambda}$$
 把$w_{j}^{*}$带进去，此时，损失函数的值为:
 $$L=-\frac{1}{2} \sum_{j=1}^{T} \frac{G_{j}^{2}}{H_{j}+\lambda}+\gamma T \tag6$$
-那么分裂分裂之前的损失
+那么分裂之前的损失
 $$-\frac{1}{2}\left[\frac{\left(G_{L}+G_{R}\right)^{2}}{H_{L}+H_{R}+\lambda}\right]+\gamma$$
 分裂之后的损失：
 $$-\frac{1}{2}\left[\frac{G_{L}^{2}}{H_{L}+\lambda}+\frac{G_{R}^{2}}{H_{R}+\lambda}\right]+2 \gamma$$

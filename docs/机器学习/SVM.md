@@ -5,11 +5,11 @@
 ![eddfcc_1200x500.jpg](https://pic3.zhimg.com/v2-197913c461c1953c30b804b4a7eddfcc_1200x500.jpg)
 ## SVM求解过程
 ### 构造问题
-**函数间隔：** 对于给定的训练数据集$T$和超平面$(w, b)$，定义超平面$(w, b)$关于样本点 $\left(x_{i}, y_{i}\right)$ 的函数间隔为
+**函数间隔：** 定义超平面$(w, b)$关于样本点 $\left(x_{i}, y_{i}\right)$ 的函数间隔为
 $$\hat{\gamma}_{i}=y_{i}\left(w \cdot x_{i}+b\right)$$
 如果等比例的改变$w,b$会发现超平面没变但函数间隔变了，所以有了几何间隔
 
-**几何间隔：** 对于给定的训练数据集$T$和超平面$(w, b)$，定义超平面$(w, b)$关于样本点 $\left(x_{i}, y_{i}\right)$ 的几何间隔为
+**几何间隔：** 定义超平面$(w, b)$关于样本点 $\left(x_{i}, y_{i}\right)$ 的几何间隔为
 $$
 \gamma_{i}=\frac{w}{\|w\|} \cdot x_{i}+\frac{b}{\|w\|}
 $$
@@ -26,7 +26,7 @@ $$\begin{array}{ll}
 \text { s.t. } & y_{i}\left(w \cdot x_{i}+b\right) \geqslant \hat{\gamma}, \quad i=1,2, \cdots, N
 \end{array}$$
 
-假设将$w$和$b$按比例改变为$\lambda w$和$\lambda b$，这时函数间隔成为$\lambda \hat\gamma$。函数间隔的这一改变对上面最优化问题的不等式约束没有影响，对目标函数的优化也没有影响，这样，就可以取$\gamma=1$。将$\gamma=1$代入上面的最优化问题，而最大化$\frac{1}{\|w\|}$和最小化$\frac{1}{2}{\|w\|}^2$是等价的，于是就得到下面的线性可分支持向量机学习的最优化问题：
+假设将$w$和$b$按比例改变为$\lambda w$和$\lambda b$，这时函数间隔成为$\lambda \hat\gamma$。函数间隔的这一改变对上面最优化问题的不等式约束没有影响，对目标函数的优化也没有影响，这样，就可以取$\hat\gamma=1$。将$\hat\gamma=1$代入上面的最优化问题，而最大化$\frac{1}{\|w\|}$和最小化$\frac{1}{2}{\|w\|}^2$是等价的，于是就得到下面的线性可分支持向量机学习的最优化问题：
 
 $$\begin{array}{cl}
 \min \limits_{w, b} & \frac{1}{2}{\|w\|}^2 \\

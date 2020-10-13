@@ -31,7 +31,7 @@ $$P(Y | X ; \theta)=\prod_{i=1}^{N}\left(h_{\theta}\left(x^{(i)}\right)^{y^{(i)}
 
 为了方便参数求解，对这个公式取对数，可得对数似然函数为：
 $$\begin{aligned}
-l(\theta)&=\sum_{i=1}^{N} \log l(\theta) \\
+l(\theta)&=\sum_{i=1}^{N} \log P(Y | X ; \theta) \\
 &=\sum_{i=1}^{N} y^{(i)} \log \left(h_{\theta}\left(x^{(i)}\right)\right)+\left(1-y^{(i)}\right) \log \left(1-h_{\theta}\left(x^{(i)}\right)\right)
 \end{aligned}$$
 
