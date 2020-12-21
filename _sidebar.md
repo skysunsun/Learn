@@ -80,6 +80,6 @@
 
 * 软件使用
   * [博客搭建](./docs/软件问题/2019-4-15-个人博客搭建脱坑路.md)
-  * [googlecolab](./docs/软件问题/googlecolab.md)
+  * [googlecolab](./docs/软件问题/googlecolab指南.md)
   * [Atom使用](./docs/软件问题/Atom使用.md)
-  * [vscode](./docs/软件问题/Vscode使用.md)
+  * [vscode](./docs/软件问题/Vscode.md)
