@@ -7,33 +7,17 @@
 ## 加载云盘
 
 1. 输入如下代码：
-```
-!apt-get install -y -qq software-properties-common python-software-properties module-init-tools
-!add-apt-repository -y ppa:alessandro-strada/ppa 2>&1 > /dev/null
-!apt-get update -qq 2>&1 > /dev/null
-!apt-get -y install -qq google-drive-ocamlfuse fuse
-from google.colab import auth
-auth.authenticate_user()
-from oauth2client.client import GoogleCredentials
-creds = GoogleCredentials.get_application_default()
-import getpass
-!google-drive-ocamlfuse -headless -id={creds.client_id} -secret={creds.client_secret} < /dev/null 2>&1 | grep URL
-vcode = getpass.getpass()
-!echo {vcode} | google-drive-ocamlfuse -headless -id={creds.client_id} -secret={creds.client_secret}
 
 ```
-这个会弹两个链接，需要你点链接，点了之后认证，然后会给你一个密码，复制到colab notebook的输入框中，完成验证
+from google.colab import drive
+drive.mount('/content/drive/')
+```
 
-看网上好多说直接复制链接到输入框。。。。。。
-这个直接报错
+这个会弹一个链接，需要你点链接，点了之后认证，然后会给你一个密码，复制到colab notebook的输入框中，完成验证
 
-2. 指定Google Drive云端硬盘的根目录，名为drive
 
-`!mkdir -p drive`
+2. 此处为google drive中的文件路径,drive为之前指定的工作根目录，要加上
 
-`!google-drive-ocamlfuse drive`
-
-3. 此处为google drive中的文件路径,drive为之前指定的工作根目录，要加上
 ```
 import os
 os.chdir("drive/Colab Notebooks")
