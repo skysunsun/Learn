@@ -32,8 +32,8 @@
       coverpage: false,
       loadSidebar: true,
       auto2top: true,//切换页面后是否自动跳转到页面顶部
-      markdown: {
-         latexRender: katex.renderToString.bind(katex)},
+      //markdown: {
+      //   latexRender: katex.renderToString.bind(katex)},
       //全文搜索
       search: {
         //maxAge: 86400000, // 过期时间，单位毫秒，默认一天
@@ -46,7 +46,16 @@
 
     }
   </script>
-
+  <!-- 数学公式 -->
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+      }
+    });
+  </script>
   
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
   <!--Python代码高亮-->
