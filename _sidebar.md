@@ -83,3 +83,5 @@
   * [googlecolab](./docs/软件问题/googlecolab指南.md)
   * [Atom使用](./docs/软件问题/Atom使用.md)
   * [vscode](./docs/软件问题/Vscode.md)
+* 杂七杂八
+  * [免费域名](./docs/杂七杂八/2026-7-15-免费域名申请.md)
